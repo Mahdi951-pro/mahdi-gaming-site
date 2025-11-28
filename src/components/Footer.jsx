@@ -6,7 +6,7 @@ const socialLinks = [
   { href: "https://youtube.com/@theheaven-v2?si=ALoc-rKsESCMhmGU", icon: <FaYoutube /> },
   { href: "https://github.com/Mahdi951-pro", icon: <FaGithub /> },
   { href: "https://wa.me/8801784658320", icon: <FaWhatsapp /> },
-  { href: "https://instagram.com/abid_neox/", icon: <FaInstagram /> },
+  { href: "https://instagram.com/abid_neox", icon: <FaInstagram /> },
 ];
 
 const Footer = () => {
