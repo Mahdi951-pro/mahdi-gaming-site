@@ -2,28 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/img/logo.png" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/mahdi-gaming-site/img/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mahdi's Gaming Site</title>
   </head>
+
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-<script>
-  // Audio file from public/audio/loop.mp3
-  const bgAudio = new Audio('/audio/loop.mp3');
-  bgAudio.loop = true;
-  bgAudio.preload = 'auto';
+    <script type="module" src="/mahdi-gaming-site/src/main.jsx"></script>
 
-  // Start audio only after first click (autoplay restriction fix)
-  const startAudio = () => {
-    bgAudio.play().catch((err) => {
-      console.error("Audio play failed:", err);
-    });
-    window.removeEventListener("click", startAudio);
-  };
+    <script>
+      // Audio file from public/audio/loop.mp3
+      const bgAudio = new Audio('/mahdi-gaming-site/audio/loop.mp3');
+      bgAudio.loop = true;
+      bgAudio.preload = 'auto';
 
-  window.addEventListener("click", startAudio);
-</script>
+      // Start audio after the first user click (autoplay restrictions)
+      const startAudio = () => {
+        bgAudio.play().catch((err) => {
+          console.error("Audio play failed:", err);
+        });
+        window.removeEventListener("click", startAudio);
+      };
+
+      window.addEventListener("click", startAudio);
+    </script>
   </body>
 </html>
