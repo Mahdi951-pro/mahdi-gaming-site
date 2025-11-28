@@ -3,12 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/img/logo.png" />
-  <audio src="/audio/loop.mp3" autoplay loop muted></audio>
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mahdi's Gaming Site</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+<script>
+  // Audio file from public/audio/loop.mp3
+  const bgAudio = new Audio('/audio/loop.mp3');
+  bgAudio.loop = true;
+  bgAudio.preload = 'auto';
+
+  // Start audio only after first click (autoplay restriction fix)
+  const startAudio = () => {
+    bgAudio.play().catch((err) => {
+      console.error("Audio play failed:", err);
+    });
+    window.removeEventListener("click", startAudio);
+  };
+
+  window.addEventListener("click", startAudio);
+</script>
   </body>
 </html>
