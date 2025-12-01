@@ -2,7 +2,7 @@ import { FaDiscord, FaTwitter, FaYoutube, FaGithub, FaWhatsapp, FaInstagram } fr
 
 const socialLinks = [
   { href: "https://discord.com", icon: <FaDiscord /> },
-  { href: "https://mahdi-dev.vercel.app", icon: <FaTwitter /> },
+  { href: "https://x.com/actionlivepro", icon: <FaTwitter /> },
   { href: "https://youtube.com/@theheaven-v2?si=ALoc-rKsESCMhmGU", icon: <FaYoutube /> },
   { href: "https://github.com/Mahdi951-pro", icon: <FaGithub /> },
   { href: "https://wa.me/8801784658320", icon: <FaWhatsapp /> },
